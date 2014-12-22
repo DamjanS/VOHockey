@@ -10,12 +10,21 @@ public class PuckMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.AddForce (rigidbody2D.velocity.normalized * 1, ForceMode2D.Impulse);
 	}
 
+	void OnCollisionEnter(Collision collision) {
+		Debug.Log ("helo");
+		rigidbody2D.AddForce (collision.relativeVelocity, ForceMode2D.Impulse);
+	}
+
+
 	void FixedUpdate() {
-		rigidbody2D.velocity = rigidbody2D.velocity.normalized * 1;
-		rigidbody2D.AddForce (rigidbody2D.velocity.normalized * 1, ForceMode2D.Impulse);
+
+		rigidbody2D.velocity = rigidbody2D.velocity.normalized * 4;
+		rigidbody2D.AddForce (rigidbody2D.velocity.normalized * 4, ForceMode2D.Impulse);
 		}
 
+	void LateUpdate() {
+				rigidbody2D.velocity = rigidbody2D.velocity.normalized * 10;
+		}
 }
