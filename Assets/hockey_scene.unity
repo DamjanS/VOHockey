@@ -83,10 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 5668200}
   - 212: {fileID: 5668199}
-  - 114: {fileID: 5668203}
   - 58: {fileID: 5668201}
-  - 50: {fileID: 5668204}
-  - 231: {fileID: 5668202}
   m_Layer: 0
   m_Name: puck
   m_TagString: Untagged
@@ -135,50 +132,10 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5668198}
   m_Enabled: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8442a791033394947a2e97675faf5ef7, type: 2}
   m_IsTrigger: 0
   m_Radius: .439999998
   m_Center: {x: 0, y: 0}
---- !u!231 &5668202
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5668198}
-  m_Enabled: 1
-  m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: 1
-  m_DampingRatio: 0
-  m_Frequency: 1
---- !u!114 &5668203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5668198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5391c0b34d8bf724588e15276863ec2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &5668204
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5668198}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!1 &108239581
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,13 +190,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: .50999999
+    width: 1
     height: 1
   near clip plane: .300000012
-  far clip plane: 500
+  far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -258,7 +215,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108239581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.76000023}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -273,7 +230,6 @@ GameObject:
   - 4: {fileID: 370698650}
   - 212: {fileID: 370698649}
   - 58: {fileID: 370698651}
-  - 50: {fileID: 370698652}
   m_Layer: 0
   m_Name: player2
   m_TagString: Untagged
@@ -326,21 +282,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .639999986
   m_Center: {x: 0, y: 0}
---- !u!50 &370698652
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 370698648}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!1 &1119233526
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +293,6 @@ GameObject:
   - 212: {fileID: 1119233528}
   - 114: {fileID: 1119233527}
   - 58: {fileID: 1119233530}
-  - 50: {fileID: 1119233531}
   m_Layer: 0
   m_Name: player1
   m_TagString: Untagged
@@ -416,21 +356,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .639999986
   m_Center: {x: 0, y: 0}
---- !u!50 &1119233531
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1119233526}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!1 &2102664814
 GameObject:
   m_ObjectHideFlags: 0
