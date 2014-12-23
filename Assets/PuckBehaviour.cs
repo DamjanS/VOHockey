@@ -3,12 +3,14 @@ using System.Collections;
 
 public class PuckBehaviour : MonoBehaviour {
 	public float speed = 6.0f;
-
+	public GameScore gameScore;
 	// Use this for initialization
 	void Start () {
 		rigidbody2D.velocity = Vector2.one.normalized * speed;
-	}
 	
+	}
+
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -40,6 +42,18 @@ public class PuckBehaviour : MonoBehaviour {
 			
 			// Set Velocity with dir * speed
 			rigidbody2D.velocity = dir * speed;
+		}
+
+		if (col.gameObject.name == "GoalScored") {
+			gameScore.AddPlayer1Score();
+			Instantiate (gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+			Destroy(gameObject);
+		}
+
+		if (col.gameObject.name == "GoalReceived") {
+			gameScore.AddPlayer2Score();
+			Instantiate (gameObject, new Vector3(0, 0, 0), Quaternion.identity);
+			Destroy(gameObject);
 		}
 
 		speed += 0.05f;
