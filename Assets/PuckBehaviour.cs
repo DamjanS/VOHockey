@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PuckBehaviour : MonoBehaviour {
-	public float speed = 4.0f;
+	public float speed = 6.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +41,8 @@ public class PuckBehaviour : MonoBehaviour {
 			// Set Velocity with dir * speed
 			rigidbody2D.velocity = dir * speed;
 		}
+
+		speed += 0.05f;
 	}
 
 	float hitFactor(Vector2 ballPos, Vector2 racketPos,
