@@ -20,6 +20,12 @@ public class PointerPlayer2Move : MonoBehaviour {
 				transform.position = new Vector3 (transform.position.x, ray.GetPoint(10f).y, transform.position.z);
 			}
 		}
+		if (tapCount == 0) {
+			if(Input.mousePosition.y>Screen.height/2){
+				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+				transform.position = new Vector3 (transform.position.x, ray.GetPoint(10f).y, transform.position.z);
+			}
+		}
 		/*int randomNumber = Random.Range (1, 10);
 
 			float randMove = Random.Range(-10.0f, 10.0f);
